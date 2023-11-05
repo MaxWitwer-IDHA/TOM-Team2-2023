@@ -29,5 +29,5 @@ void loop() {
   Serial.print(orientationData.orientation.z);
   Serial.println();
 
-  delay(100);
+  delay(10);
 }

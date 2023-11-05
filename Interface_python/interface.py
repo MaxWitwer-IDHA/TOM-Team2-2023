@@ -11,8 +11,8 @@
 import serial
 
 # Replace the port with your device's port
-port = "/dev/cu.HC-06"
-baud_rate =  38400
+port = "/dev/cu.Remy"
+baud_rate =  115200
 
 # Define the serial port
 ser = serial.Serial(port, baud_rate)
@@ -31,7 +31,8 @@ try:
 
         # Read and print the echo back from the device
         echo = ser.readline().decode()
-        print(f"Device echo: {echo}", end='')
+        #print(f"Device echo: {echo}", end='')
+        print(echo.split(",")[-1])
 
 except KeyboardInterrupt:
     pass

@@ -34,6 +34,8 @@ void setup() {
 }
 
 void loop() {
+  // tryReconnect();
+
   buttonState = digitalRead(buttonPin);
 
   sensors_event_t event;
@@ -49,3 +51,10 @@ void loop() {
 
 
 }
+
+// void tryReconnect() {
+//   if (!SerialBT.connected()) {
+//     SerialBT.begin("Remy"); // Re-initialize Bluetooth
+//   }
+// }
+
